@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ultimate Weather App • PRODIGY_WD_05 • Krishna Pandey</title>
+  <meta name="description" content="Ultimate 3D Weather app - Prodigy InfoTech Task 05 by Krishna Pandey" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 3D Animated Background -->
+  <div class="particles-container" id="particles"></div>
+  
+  <main class="wrap">
+    <header class="header">
+      <h1 class="app-title">Weather<span class="highlight">3D</span></h1>
+      <p class="sub">Task 05 — Prodigy InfoTech Web Development Internship</p>
+    </header>
+
+    <section class="card glass-card">
+      <div class="card-inner" id="cardInner">
+        <div class="card-front">
+          <form id="searchForm" class="search" autocomplete="off">
+            <div class="input-wrapper">
+              <input
+                id="cityInput"
+                type="text"
+                placeholder="Enter city (e.g. Mumbai, Delhi, London)"
+                required
+              />
+              <div class="search-icon">🔍</div>
+            </div>
+            <button type="submit" class="btn primary btn-3d" id="searchBtn">
+              <span class="btn-text">Get Weather</span>
+            </button>
+          </form>
+
+          <p class="hint">Powered by free API (Open-Meteo). City name → current weather.</p>
+          
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">🌡️</div>
+              <span>Real-time Data</span>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🌐</div>
+              <span>Global Coverage</span>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">⚡</div>
+              <span>Instant Results</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-back">
+          <div id="status" class="status"></div>
+          
+          <section id="result" class="result" hidden aria-live="polite">
+            <div class="result-header">
+              <div>
+                <h2 id="cityName">City</h2>
+                <p id="countryName" class="muted">Country</p>
+              </div>
+              <div class="temp-main">
+                <span id="tempNow">--</span>
+                <span class="unit">°C</span>
+              </div>
+            </div>
+
+            <div class="weather-visual">
+              <div class="weather-icon" id="weatherIcon">
+                <span id="emoji" class="emoji">☁️</span>
+              </div>
+              <p id="description" class="weather-desc">Search a city to see the weather.</p>
+            </div>
+
+            <div class="meta">
+              <div class="meta-item glass-item">
+                <div class="meta-icon">🌡️</div>
+                <div class="meta-content">
+                  <span class="label">Feels like</span>
+                  <span id="feelsLike" class="value">-- °C</span>
+                </div>
+              </div>
+              <div class="meta-item glass-item">
+                <div class="meta-icon">💨</div>
+                <div class="meta-content">
+                  <span class="label">Wind</span>
+                  <span id="wind" class="value">-- km/h</span>
+                </div>
+              </div>
+              <div class="meta-item glass-item">
+                <div class="meta-icon">💧</div>
+                <div class="meta-content">
+                  <span class="label">Humidity</span>
+                  <span id="humidity" class="value">-- %</span>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn secondary" id="flipBack">← Back to Search</button>
+          </section>
+        </div>
+      </div>
+      
+      <footer class="links">
+        <a href="https://github.com/krishnapandey2006/PRODIGY_WD_05" target="_blank" rel="noopener">View Source</a>
+      </footer>
+    </section>
+    
+    <div class="floating-elements">
+      <div class="floating-element" style="top: 10%; left: 15%; animation-delay: 0s;">🌤️</div>
+      <div class="floating-element" style="top: 20%; left: 80%; animation-delay: 1s;">🌧️</div>
+      <div class="floating-element" style="top: 70%; left: 25%; animation-delay: 2s;">⛅</div>
+      <div class="floating-element" style="top: 80%; left: 75%; animation-delay: 3s;">☀️</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
